@@ -1,24 +1,10 @@
-# README
+# A Bankish API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A coding challenge to implement a set of bank account-like classes with some reporting features.
 
-Things you may want to cover:
+Made with Rails 7 and PostgreSQL.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It would be nice to add later: 
+  - Operations caching
+  - More tests (probably change to RSpec)
+  - Search and Filtering options
