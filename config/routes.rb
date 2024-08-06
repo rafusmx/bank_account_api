@@ -1,13 +1,22 @@
 Rails.application.routes.draw do
-  get 'accounts/create'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  scope :api do
+    namespace :v1 do
+      resources :accounts, only: %i[create destroy] do
+        resource :transactions, only: [] do
+          put :deposit, controller: "accounts/transactions"
+          put :withdraw, controller: "accounts/transactions"
+        end
+        resource :inquiries, only: [] do
+          get :account_statement, controller: "accounts/inquiries"
+          get :current_balance, controller: "accounts/inquiries"
+          get :recent_movements, controller: "accounts/inquiries"
+        end
+      end
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  # root "posts#index"
-
-  resources :accounts, only: :create
+      namespace :reports do
+        resource :customer_transactions, only: :show
+        resource :non_local_withdrawals, only: :show
+      end
+    end
+  end
 end

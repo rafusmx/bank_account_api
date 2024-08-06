@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+empty_account:
+  id: 1
+  owner_type: "Person"
+  owner_id: 2
+  branch_office_id: 1
+  balance: 199.99
+  account_number: 1
+  activated_on: 2024-07-04
+  closed_on: nil
+
+rich_account:
+  id: 2
+  owner_type: "Person"
+  owner_id: 4
+  branch_office_id: 3
+  balance: 1000000.00
+  account_number: 2
+  activated_on: 2023-08-04
+  closed_on: nil
+
+average_account:
+  id: 3
+  owner_type: "Person"
+  owner_id: 4
+  branch_office_id: 3
+  balance: 10000.00
+  account_number: 3
+  activated_on: 2023-08-04
+  closed_on: nil
+
+closed_account:
+  id: 4
+  owner_type: "Person"
+  owner_id: 4
+  branch_office_id: 3
+  balance: 0.00
+  account_number: 4
+  activated_on: 2023-08-04
+  closed_on: 2023-08-05

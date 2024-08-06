@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+david:
+  first_name: David
+  last_name: Linch
+
+bob:
+  first_name: Bob
+  last_name: Ross
+
+joe:
+  first_name: Joe
+  last_name: Montana
